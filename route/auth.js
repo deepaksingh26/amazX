@@ -9,9 +9,7 @@ const middleware=require('../middleware/middleware');
 require('../db/conn');
 
 const User=require("../model/userschema");
-router.get("/",(req,res)=>{
-    res.send(`hello from router server`);
-});
+
 router.post("/register",async(req,res)=>{
 
     const {fName,email,phone,pass,cpass}=req.body;
