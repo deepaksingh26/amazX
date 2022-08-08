@@ -19,10 +19,10 @@ const PORT=process.env.PORT || 5000;
 //     res.send(`hello from about server`);
 //     console.log("hello about");
 // });
-app.get("/getdata",(req,res)=>{
-    res.cookie("test",'thapa');
-    res.send(`hello from contact server`);
-});
+// app.get("/getdata",(req,res)=>{
+//     res.cookie("test",'thapa');
+//     res.send(`hello from contact server`);
+// });
 
 if(process.env.NODE_ENV=="production"){
     app.use(express.static("front/build"))
