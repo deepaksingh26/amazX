@@ -10,7 +10,7 @@ const LeaveApplication=()=>{
     const token_a=localStorage.getItem("token_a")
 
     const getPendingLeaveData=async()=>{
-       const penleave= await axios.get("http://localhost:7500/pendingleave")
+       const penleave= await axios.get("http://https://amazx-1.onrender.com/pendingleave")
        setPendingLeave(penleave.data)
        setLoader(false)
     }
@@ -20,7 +20,7 @@ const LeaveApplication=()=>{
     },[refresh])
 
     const updateLeaveStatus=async(status,id)=>{
-        const res=await axios.post(`http://localhost:7500/updateleavestatus/${id}`,{status:status})
+        const res=await axios.post(`http://https://amazx-1.onrender.com/updateleavestatus/${id}`,{status:status})
         Swal.fire({
             icon: status=='approved'?'success':'error',
             title: 'Update Leave Status',

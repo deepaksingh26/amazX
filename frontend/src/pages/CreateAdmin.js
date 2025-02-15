@@ -11,7 +11,7 @@ const CreateAdmin = () => {
         setAdminData({...adminData,[e.target.name]:e.target.value})
     }
     const createAdmin=async()=>{
-        const createadmin= await axios.post("http://localhost:7500/addAdmin",adminData);
+        const createadmin= await axios.post("http://https://amazx-1.onrender.com/addAdmin",adminData);
         Swal.fire({
           icon: 'success',
           title: 'Create Admin',

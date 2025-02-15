@@ -16,7 +16,7 @@ const ApplyForLeave=({employeeData})=>{
     const leaveInputHandler=(e)=>setLeave({...leave,[e.target.name]:e.target.value})
     const id=employeeData.name;
     const getLeaveData=async()=>{
-       const leaves=await axios.get(`http://localhost:7500/leave/${id}`)
+       const leaves=await axios.get(`http://https://amazx-1.onrender.com/leave/${id}`)
        setLeaveData(leaves.data);
     }
     
@@ -27,7 +27,7 @@ const ApplyForLeave=({employeeData})=>{
     const SubmitHandler=async(e)=>{
         e.preventDefault()
         //  console.log(employeeData)
-        const applyforleave=await axios.post("http://localhost:7500/leave/"+id,{...leave,status:"pending",employee_id:employeeData.name,name:employeeData.name})
+        const applyforleave=await axios.post("http://https://amazx-1.onrender.com/leave/"+id,{...leave,status:"pending",employee_id:employeeData.name,name:employeeData.name})
         Swal.fire({
           icon: 'success',
           title: 'Leave Application',

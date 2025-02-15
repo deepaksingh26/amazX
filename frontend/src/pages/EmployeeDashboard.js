@@ -16,7 +16,7 @@ const EmployeeDashboard = () => {
    const id=localStorage.getItem("id");
 
    const Employee=async()=>{
-     const employee=await axios.get(`http://localhost:7500/Employee/${id}`)
+     const employee=await axios.get(`http://https://amazx-1.onrender.com/Employee/${id}`)
      if(employee.data.success==false){
          navigate(`${employee.data.redirect}`)
      }

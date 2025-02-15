@@ -16,7 +16,7 @@ const Home = () => {
                 alert('Username or password cannot be blank');
             }
             else{
-                const result=await axios.post("http://localhost:7500/loginEmployee",{email:employeeData.email,password:employeeData.password});
+                const result=await axios.post("http://https://amazx-1.onrender.com/loginEmployee",{email:employeeData.email,password:employeeData.password});
                 localStorage.setItem("id",result.data.employee[0]._id)
                 localStorage.setItem("token",result.data.token)
                 if(result.data.success) {
