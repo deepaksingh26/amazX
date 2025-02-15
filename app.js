@@ -17,15 +17,17 @@ app.use(cookieParser())
 app.use(express.json());
 // app.use(cors()); 
 
-const allowedOrigins=['https://cozy-cranachan-5df1c6.netlify.app'];
+const allowedOrigins=['https://euphonious-pothos-0feb65.netlify.app'];
 
 const corsOptions = {
-    origin: (origin, callback) => {
-        if (allowedOrigins.indexOf(origin) !==-1)  callback(null, true);
+    origin: function (origin, callback)  {
+        if (!origin || allowedOrigins.indexOf(origin) !==-1)  callback(null, true);
         else {
              callback(new Error('Not allowed by CORS'));
         }
-    }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }
 app.use(cors(corsOptions));
 if(process.env.NODE_ENV==="production"){
