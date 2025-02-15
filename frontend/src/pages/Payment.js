@@ -7,7 +7,7 @@ const Payment=()=>{
   const paymentDataHandler=(e)=>setPaymentData({...paymentData,[e.target.name]:e.target.value});
   const payAllEmployees=async()=>{
     console.log(paymentData)
-    const payallemployee=await axios.post("http://https://amazx-1.onrender.com/payallemployee",paymentData);
+    const payallemployee=await axios.post("https://amazx-1.onrender.com/payallemployee",paymentData);
     Swal.fire({ 
       icon: 'success',
       title: 'Payment',

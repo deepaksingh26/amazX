@@ -8,7 +8,7 @@ const EditDetails = ({employeeData,setEmployeeData}) => {
    const id=localStorage.getItem("id")
    const employeeInputHandler=(e)=>setEmployeeData({...employeeData,[e.target.name]:e.target.value})
     const updateEmployee=async()=>{
-      const employee=await axios.patch(`http://https://amazx-1.onrender.com/employee/Employee/${id}`,employeeData)
+      const employee=await axios.patch(`https://amazx-1.onrender.com/employee/Employee/${id}`,employeeData)
       Swal.fire({
         icon: 'success',
         title: 'Employee Details',

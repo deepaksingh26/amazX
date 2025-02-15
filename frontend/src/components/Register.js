@@ -24,7 +24,7 @@ const Register = () => {
       setRegisteredSuccessfully(false);
       setRegisterErr(false);
       console.log(register);
-      const registerResponse=await axios.post("http://https://amazx-1.onrender.com/registerEmployee",register);
+      const registerResponse=await axios.post("https://amazx-1.onrender.com/registerEmployee",register);
       console.log(registerResponse.data);
       navigate('/employee_dashboard');
       if(registerResponse.data.messege){

@@ -12,7 +12,7 @@ const AddEmployee = () => {
     }
 
     const addEmployee=async()=>{
-         const addemployee=await axios.post("/registerEmployee",employee) 
+         const addemployee=await axios.post("https://amazx-1.onrender.com/registerEmployee",employee) 
          Swal.fire({
           icon: 'success',
           title: 'Add Employee',

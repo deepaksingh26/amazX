@@ -17,7 +17,7 @@ const ViewAllAdmin=()=>{
 
   useEffect(()=>{
       const admin=async()=>{
-           const adminData=await axios.get("http://https://amazx-1.onrender.com/admins")
+           const adminData=await axios.get("https://amazx-1.onrender.com/admins")
            setAdmins(adminData.data)
            setLoader(false);
       }

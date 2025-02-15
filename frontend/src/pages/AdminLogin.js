@@ -16,7 +16,7 @@ const LoginAdmin = () => {
         }
         else{
            console.log(adminData)
-           const {data}=await axios.post("http://https://amazx-1.onrender.com/admin/login",adminData)
+           const {data}=await axios.post("https://amazx-1.onrender.com/admin/login",adminData)
            console.log(data)
            localStorage.setItem("id_a",data.admin[0]._id)
            localStorage.setItem("name_a",data.admin[0].name)

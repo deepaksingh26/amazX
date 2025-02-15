@@ -17,7 +17,7 @@ const ViewAllEmployees=()=>{
   const navigate=useNavigate()
 
   const getAllEmployees=async()=>{
-    const res=await axios.get("http://https://amazx-1.onrender.com/Employees")
+    const res=await axios.get("https://amazx-1.onrender.com/Employees")
     
 
     if(res.data.success==false){
@@ -36,7 +36,7 @@ const ViewAllEmployees=()=>{
 
   const updateEmployee=async()=>{
     const id=employee._id;
-    const tempemployee=await axios.patch(`http://https://amazx-1.onrender.com/Employee/${id}`,employee)
+    const tempemployee=await axios.patch(`https://amazx-1.onrender.com/Employee/${id}`,employee)
     setRefresh(!refresh)
     Swal.fire({
       icon: 'success',
@@ -46,7 +46,7 @@ const ViewAllEmployees=()=>{
 
   }
   const deleteEmployee=async(id)=>{
-    const delemployee=await axios.delete(`http://https://amazx-1.onrender.com/Employee/${id}`)
+    const delemployee=await axios.delete(`https://amazx-1.onrender.com/Employee/${id}`)
     setRefresh(!refresh) 
     Swal.fire({
       icon: 'success',
