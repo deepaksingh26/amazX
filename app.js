@@ -27,7 +27,7 @@ const corsOptions = {
         }
     },
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    // allowedHeaders: ['Content-Type', 'Authorization'],
 }
 app.use(cors(corsOptions));
 if(process.env.NODE_ENV==="production"){
