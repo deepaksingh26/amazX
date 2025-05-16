@@ -17,7 +17,7 @@ app.use(cookieParser())
 app.use(express.json());
 // app.use(cors()); 
 
-const allowedOrigins=['https://euphonious-pothos-0feb65.netlify.app'];
+const allowedOrigins=['https://euphonious-pothos-0feb65.netlify.app','https://sensational-croquembouche-cffbcf.netlify.app'];
 
 const corsOptions = {
     origin: function (origin, callback)  {
